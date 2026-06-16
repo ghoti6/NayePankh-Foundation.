@@ -1,0 +1,6 @@
+{
+  "name": "NayePankh Foundation",
+  "description": "Official responsive webpage for NayePankh Foundation with interactive drives slider, multi-step donation modal, team join portal, interactive FAQ, and dark mode.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

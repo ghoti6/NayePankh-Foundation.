@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-blue: #0A3981;
+  --color-brand-orange: #FD8B51;
+  --color-brand-dark: #1E201E;
+}
+
+/* Base resets & dark mode transition smoothness */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.15s ease, box-shadow 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans antialiased bg-slate-50 text-slate-800 dark:bg-[#121212] dark:text-slate-100;
+}
+
+/* Utility styles */
+.glass-nav {
+  @apply backdrop-blur-lg bg-white/90 border-b border-slate-200/50 dark:bg-zinc-950/90 dark:border-zinc-800/50;
+}
+
+.glass-card {
+  @apply backdrop-blur-md bg-white/40 dark:bg-zinc-900/40 border border-white/20 dark:border-zinc-800/20 shadow-slate-100/10 dark:shadow-none;
+}
+
+/* Animations */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-zinc-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-zinc-700 rounded-full hover:bg-slate-400 dark:hover:bg-zinc-600;
+}
+
+/* Slider transition active/inactive state */
+.slider-slide {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: scale(0.95);
+  display: none;
+}
+
+.slider-slide.active {
+  opacity: 1;
+  transform: scale(1);
+  display: block;
+}
+
+/* Accordion max-height helper */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  @apply py-4;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+/* Circle pulse glow for CTA indicators */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+.pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}

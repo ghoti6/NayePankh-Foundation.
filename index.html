@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NayePankh Foundation | UP Government Registered 80G Tax-Exempt NGO</title>
+  </head>
+  <body class="bg-slate-50 text-slate-800 dark:bg-zinc-950 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- ==========================================
+         01. NAVIGATION BAR
+         ========================================== -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-40 w-full py-5 px-4 sm:px-8 flex items-center justify-between transition-all duration-300 bg-transparent">
+      <!-- Logo Container -->
+      <a href="#" class="flex items-center gap-2 group focus:outline-none">
+        <div class="w-10 h-10 rounded-full overflow-hidden border border-slate-200/50 dark:border-zinc-800/80 shadow-lg group-hover:scale-105 transition-transform duration-300 flex items-center justify-center bg-white">
+          <!-- Official NayePankh Logo Image -->
+          <img src="/src/assets/images/logo_1781616878233.jpg" alt="NayePankh Foundation Logo" class="w-full h-full object-cover" referrerPolicy="no-referrer" />
+        </div>
+        <div>
+          <span class="font-display font-bold text-lg tracking-tight text-brand-blue dark:text-white">NayePankh</span>
+          <span class="block text-[10px] font-mono tracking-widest text-orange-600 dark:text-brand-orange uppercase font-bold -mt-1">Foundation</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="#about" class="nav-link text-sm font-medium hover:text-orange-600 dark:hover:text-amber-500 transition-colors">About</a>
+        <a href="#pillars" class="nav-link text-sm font-medium hover:text-orange-600 dark:hover:text-amber-500 transition-colors">What We Do</a>
+        <a href="#drives" class="nav-link text-sm font-medium hover:text-orange-600 dark:hover:text-amber-500 transition-colors">Active Drives</a>
+        <a href="#faqs" class="nav-link text-sm font-medium hover:text-orange-600 dark:hover:text-amber-500 transition-colors">FAQs</a>
+        <a href="#contact" class="nav-link text-sm font-medium hover:text-orange-600 dark:hover:text-amber-500 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-desktop" class="p-2.5 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800 transition-colors" aria-label="Toggle Dark Mode">
+          <!-- Sun Icon -->
+          <svg class="theme-sun-icon w-5 h-5 text-amber-500 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+          <!-- Moon Icon -->
+          <svg class="theme-moon-icon w-5 h-5 text-slate-700 dark:text-slate-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
+
+        <!-- Main Donate Call to Action -->
+        <button class="open-donate-modal px-5 py-2.5 rounded-full text-xs font-semibold bg-brand-blue text-white hover:bg-opacity-90 dark:bg-white dark:text-zinc-950 hover:shadow-lg dark:hover:shadow-white/5 transition-all duration-300 cursor-pointer">
+          Donate and Save Life
+        </button>
+
+        <!-- Mobile Drawer Hamburger Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ==========================================
+         01b. MOBILE NAVIGATION DRAWER
+         ========================================== -->
+    <div id="mobile-drawer-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-45 hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="mobile-menu-drawer" class="fixed top-0 right-0 bottom-0 z-50 w-[280px] max-w-full bg-white dark:bg-zinc-900 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 shadow-2xl">
+      <div>
+        <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-100 dark:border-zinc-800">
+          <span class="font-display font-semibold text-brand-blue dark:text-white">Navigation</span>
+          <button id="mobile-menu-close" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav class="flex flex-col gap-5">
+          <a href="#about" class="mobile-nav-link text-base font-medium py-1">About NayePankh</a>
+          <a href="#pillars" class="mobile-nav-link text-base font-medium py-1">What We Do</a>
+          <a href="#drives" class="mobile-nav-link text-base font-medium py-1">Active Drives</a>
+          <a href="#faqs" class="mobile-nav-link text-base font-medium py-1">FAQs</a>
+          <a href="#contact" class="mobile-nav-link text-base font-medium py-1">Contact Us</a>
+        </nav>
+      </div>
+
+      <div class="pt-6 border-t border-slate-100 dark:border-zinc-800 flex flex-col gap-4">
+        <!-- Theme Toggle button inside Mobile Menu -->
+        <div class="flex items-center justify-between">
+          <span class="text-sm text-slate-500">Theme</span>
+          <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-zinc-800">
+            🌙 Dark Mode / Light Mode
+          </button>
+        </div>
+        <button class="open-donate-modal w-full py-3 bg-brand-blue text-white dark:bg-white dark:text-zinc-900 rounded-xl font-semibold text-sm">
+          Donate and Save Life
+        </button>
+      </div>
+    </div>
+
+
+    <!-- ==========================================
+         02. HERO SECTION
+         ========================================== -->
+    <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 md:px-8 overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(to right, rgba(10,57,129,0.95), rgba(30,32,30,0.85)), url('/src/assets/images/hero_background_1781618211152.jpg')">
+      <!-- Hero Background Design Elements -->
+      <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+      
+      <div class="relative max-w-5xl mx-auto text-center z-10 text-white flex flex-col items-center">
+        <!-- Government Registry Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 mb-8 backdrop-blur-md">
+          <span class="w-2.5 h-2.5 rounded-full bg-brand-orange animate-ping"></span>
+          <span class="text-xs font-mono tracking-wider font-semibold uppercase">UP Government Registered | Sec 80G & 12A Exempted</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="font-display font-extrabold text-4xl sm:text-5xl md:text-6xl tracking-tight leading-none mb-6">
+          It's that easy to bring a <br class="hidden sm:block"/>
+          <span class="text-brand-orange bg-clip-text">Smile</span> on Their Faces
+        </h1>
+
+        <!-- Subheading -->
+        <p class="text-base sm:text-lg md:text-xl text-slate-200 font-light max-w-2xl mx-auto leading-relaxed mb-10">
+          We do not ask for much, just help us with whatever you can spare. Be it your money, volunteer skills, or valuable time. Together, let's secure a brighter future.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+          <button class="open-donate-modal px-8 py-4 bg-brand-orange hover:bg-orange-600 text-white rounded-full font-bold text-sm tracking-wide shadow-lg shadow-orange-500/20 hover:scale-105 transition-all cursor-pointer">
+            Donate and Save Life
+          </button>
+          <button class="open-join-modal px-8 py-4 bg-white/15 hover:bg-white/25 text-white border border-white/20 rounded-full font-bold text-sm tracking-wide backdrop-blur-sm transition-all">
+            Join Our Volunteer Team
+          </button>
+        </div>
+
+        <!-- Core KPI Board Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl w-full">
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
+            <div class="stat-number font-display text-3xl sm:text-4xl font-extrabold text-brand-orange mb-1" data-target="50000" data-suffix="+">0+</div>
+            <div class="text-xs uppercase tracking-widest text-slate-300">Lives Restored</div>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
+            <div class="stat-number font-display text-3xl sm:text-4xl font-extrabold text-brand-orange mb-1" data-target="12" data-suffix="+">0+</div>
+            <div class="text-xs uppercase tracking-widest text-slate-300">Cities Active</div>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
+            <div class="stat-number font-display text-3xl sm:text-4xl font-extrabold text-brand-orange mb-1" data-target="1500" data-suffix="+">0+</div>
+            <div class="text-xs uppercase tracking-widest text-slate-300">Volunteers</div>
+          </div>
+          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex flex-col justify-center">
+            <div class="font-display text-2xl sm:text-3xl font-extrabold text-green-400 mb-1">50%</div>
+            <div class="text-xs uppercase tracking-widest text-slate-300 font-mono">Sec 80G Relief</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         03. ABOUT US SECTION
+         ========================================== -->
+    <section id="about" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Side: Interactive Portal Display -->
+        <div class="lg:col-span-5 relative">
+          <!-- Main Frame Image showing Indian Kid smiling -->
+          <div class="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl shadow-blue-900/10 dark:shadow-none border border-slate-200/50 dark:border-zinc-800">
+            <img src="https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?auto=format&fit=crop&w=600&q=80" alt="NayePankh Foundation Child Smiling" class="w-full h-full object-cover">
+            <!-- Glass Overlay Card -->
+            <div class="absolute bottom-6 left-6 right-6 p-5 glass-card rounded-2xl text-slate-900 dark:text-white">
+              <span class="text-xs uppercase tracking-wider font-mono text-orange-600 dark:text-brand-orange font-bold">LEGITIMACY</span>
+              <p class="text-xs mt-1 text-slate-700 dark:text-slate-200">NayePankh is a registered NGO under Sub-Section (ii) of Section 80G/12A of the Income Tax Act.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Content & Dynamic Switcher Profile -->
+        <div class="lg:col-span-7">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">ABOUT OUR NGO</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white mt-1 mb-6 leading-tight">
+            Think global, <span class="text-brand-orange">Act local.</span>
+          </h2>
+
+          <!-- Interactive Tabs Switch Header -->
+          <div class="flex gap-2 p-1.5 rounded-xl bg-slate-100 dark:bg-zinc-900 mb-8 border border-slate-200/50 dark:border-zinc-800">
+            <button class="about-tab-btn flex-1 py-3 px-4 text-xs font-semibold rounded-lg bg-brand-blue text-white shadow-md transition-all scale-105" data-target="panel-mission">
+              Our Mission
+            </button>
+            <button class="about-tab-btn flex-1 py-3 px-4 text-xs font-semibold rounded-lg bg-white text-slate-700 hover:bg-slate-50 dark:bg-zinc-800 dark:text-slate-300 dark:hover:bg-zinc-700 transition-all" data-target="panel-vision">
+              Pure Vision
+            </button>
+            <button class="about-tab-btn flex-1 py-3 px-4 text-xs font-semibold rounded-lg bg-white text-slate-700 hover:bg-slate-50 dark:bg-zinc-800 dark:text-slate-300 dark:hover:bg-zinc-700 transition-all" data-target="panel-why">
+              Securing Exemption
+            </button>
+          </div>
+
+          <!-- Tab Panel 1 -->
+          <div id="panel-mission" class="about-tab-panel text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base space-y-4">
+            <p>
+              <b>NayePankh Foundation</b> is one of India's biggest student-led non-governmental organisations with a central purpose of fighting deep-rooted inequalities in education, women's dignity, hunger, and emergency relief.
+            </p>
+            <p>
+              We operate grassroot local chapters across Kanpur, Ghaziabad, and several other northern cities. Our mission is direct, simple, and action-oriented: act local, execute transparently, and make every single rupee countable! Let's revolutionise the society together.
+            </p>
+          </div>
+
+          <!-- Tab Panel 2 (Hidden Initially) -->
+          <div id="panel-vision" class="about-tab-panel hidden text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base space-y-4">
+            <p>
+              We work tirelessly toward a peaceful, inclusive society where children can thrive to their complete cognitive capabilities and enjoy absolute parity regardless of financial brackets.
+            </p>
+            <p>
+              By breaking menstrual myths, feeding daily wage workers, putting children into robust formal classrooms, we desire to eliminate foundational disadvantages.
+            </p>
+          </div>
+
+          <!-- Tab Panel 3 (Hidden Initially) -->
+          <div id="panel-why" class="about-tab-panel hidden text-slate-600 dark:text-slate-300 leading-relaxed text-sm sm:text-base space-y-4">
+            <p>
+              Every donation you secure through NayePankh is eligible for tax refunds with standard <b>80G certifications</b>. 
+            </p>
+            <p>
+              NGO legitimacy is audited periodically. Your tax bracket will deduct 50% contributions directly from taxable thresholds, giving both corporate donors and individuals an amazing avenue to give back securely.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-4 mt-8 pt-4 border-t border-slate-100 dark:border-zinc-800">
+            <a href="#pillars" class="px-6 py-3.5 bg-slate-100 hover:bg-slate-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-slate-700 dark:text-slate-200 text-xs font-bold rounded-xl transition-all">
+              Discover Our Campaigns ↓
+            </a>
+            <button class="open-donate-modal px-6 py-3.5 bg-brand-orange text-white hover:bg-opacity-90 text-xs font-bold rounded-xl transition-all">
+              Claim 80G Benefits Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         04. THE CORE CAMPAIGN PILLARS
+         ========================================== -->
+    <section id="pillars" class="py-24 bg-slate-100/50 dark:bg-[#151515] border-y border-slate-200/50 dark:border-zinc-900 px-4 sm:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">OUR SOCIAL IMPACT</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white mt-1">Our Core Pillars</h2>
+          <p class="text-slate-500 dark:text-slate-400 text-sm sm:text-base mt-2">Active initiatives tackling critical structural needs across marginalized societies in India.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Pillar 1 -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200/50 dark:border-zinc-800/80 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-orange-50 dark:bg-orange-500/10 flex items-center justify-center text-brand-orange mb-6">
+                <!-- Book/Education Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-slate-900 dark:text-white mb-2">Child Education</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+                Sponsoring school fees, providing textbooks/backpacks, and establishing active weekend learning camps inside slums.
+              </p>
+            </div>
+            <button class="open-donate-modal text-xs font-bold text-brand-blue dark:text-slate-200 flex items-center gap-1 group self-start hover:text-brand-orange hover:-translate-x-1 duration-200 transition-all">
+              Fund Classrooms
+              <span>→</span>
+            </button>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200/50 dark:border-zinc-800/80 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-red-50 dark:bg-red-500/10 flex items-center justify-center text-rose-500 mb-6">
+                <!-- Heart/Hygiene Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-slate-900 dark:text-white mb-2">Hygiene Awareness</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+                Defeating taboos by distributing feminine sanitary napkins and spreading scientific puberty health menstrual education.
+              </p>
+            </div>
+            <button class="open-donate-modal text-xs font-bold text-brand-blue dark:text-slate-200 flex items-center gap-1 group self-start hover:text-rose-500 duration-200 transition-all">
+              Support Women
+              <span>→</span>
+            </button>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200/50 dark:border-zinc-800/80 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-green-50 dark:bg-green-500/10 flex items-center justify-center text-green-500 mb-6">
+                <!-- Food/Relief Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707" />
+                </svg>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-slate-900 dark:text-white mb-2">Hunger Relief</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+                Serving freshly packed nutritious local meals daily to daily wage workers, homeless seniors, and low-wealth households.
+              </p>
+            </div>
+            <button class="open-donate-modal text-xs font-bold text-brand-blue dark:text-slate-200 flex items-center gap-1 group self-start hover:text-green-500 duration-200 transition-all">
+              Feed Families
+              <span>→</span>
+            </button>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200/50 dark:border-zinc-800/80 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-500/10 flex items-center justify-center text-blue-500 mb-6">
+                <!-- Home/Winter Relief Icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+              </div>
+              <h3 class="font-display font-semibold text-lg text-slate-900 dark:text-white mb-2">Winter & Emergency</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-4">
+                Distributing heavy winter blankets, high-density clothing packs, and support resources during extreme seasons or crises.
+              </p>
+            </div>
+            <button class="open-donate-modal text-xs font-bold text-brand-blue dark:text-slate-200 flex items-center gap-1 group self-start hover:text-blue-500 duration-200 transition-all">
+              Sponsor Warmth
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         05. INTERACTIVE DRIVES GALLERY/CAROUSEL
+         ========================================== -->
+    <section id="drives" class="py-24 max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+        <div>
+          <span class="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">GALLERY PORTFOLIO</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white mt-1">Our Impact Operations</h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <!-- Prev Arrows Button -->
+          <button id="prev-slide" class="p-3 bg-white dark:bg-zinc-900 rounded-full border border-slate-200/50 dark:border-zinc-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-zinc-800 transition-transform active:scale-90 shadow-sm cursor-pointer" aria-label="Previous Slide">
+            ←
+          </button>
+          <button id="next-slide" class="p-3 bg-white dark:bg-zinc-900 rounded-full border border-slate-200/50 dark:border-zinc-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-zinc-800 transition-transform active:scale-90 shadow-sm cursor-pointer" aria-label="Next Slide">
+            →
+          </button>
+        </div>
+      </div>
+
+      <!-- Carousel Frame -->
+      <div id="carousel-container" class="relative rounded-3xl overflow-hidden aspect-[16/9] max-h-[500px] border border-slate-200/50 dark:border-zinc-800 bg-zinc-950 shadow-xl shadow-blue-900/5">
+        
+        <!-- Slide 1: Education -->
+        <div class="slider-slide absolute inset-0 bg-cover bg-center active" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop')">
+          <div class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 text-white max-w-3xl">
+            <span class="px-3 py-1 bg-brand-orange text-white text-[10px] uppercase font-bold tracking-widest font-mono rounded-full mb-3 inline-block">CAMPAIGN SAKSHAM</span>
+            <h3 class="font-display font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight">Shifting Children off Slum Streets & Into Schools</h3>
+            <p class="text-slate-200 text-xs sm:text-sm mt-2 font-light">With our student chapters, we sponsor school tuitions, provide uniforms, and run digital learning labs every month.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2: Pads -->
+        <div class="slider-slide absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1594608661623-aa0bd3a69d28?q=80&w=1200&auto=format&fit=crop')">
+          <div class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 text-white max-w-3xl">
+            <span class="px-3 py-1 bg-rose-600 text-white text-[10px] uppercase font-bold tracking-widest font-mono rounded-full mb-3 inline-block">CAMPAIGN SUKHNA</span>
+            <h3 class="font-display font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight">Menstrual Hygiene Awareness & Pad Distribution</h3>
+            <p class="text-slate-200 text-xs sm:text-sm mt-2 font-light">We distribute sanitary health packages to underprivileged girls and host gynecological counseling workshops.</p>
+          </div>
+        </div>
+
+        <!-- Slide 3: Food -->
+        <div class="slider-slide absolute inset-0 bg-cover bg-center" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop')">
+          <div class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 text-white max-w-3xl">
+            <span class="px-3 py-1 bg-green-600 text-white text-[10px] uppercase font-bold tracking-widest font-mono rounded-full mb-3 inline-block">CAMPAIGN ANNAPURNA</span>
+            <h3 class="font-display font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight">Zero Hunger Feeding Over 1,000+ Daily Wages</h3>
+            <p class="text-slate-200 text-xs sm:text-sm mt-2 font-light">Providing fresh hot breakfast and lunch grains packaging to daily laborers, street corners, and senior communities.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dots Indicator -->
+      <div class="flex items-center justify-center gap-2.5 mt-6">
+        <button class="carousel-dot w-2 h-2 rounded-full cursor-pointer transition-all bg-orange-600 scale-125" aria-label="Slide 1"></button>
+        <button class="carousel-dot w-2 h-2 rounded-full cursor-pointer transition-all bg-slate-300 dark:bg-zinc-700" aria-label="Slide 2"></button>
+        <button class="carousel-dot w-2 h-2 rounded-full cursor-pointer transition-all bg-slate-300 dark:bg-zinc-700" aria-label="Slide 3"></button>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         06. LEADERS SPEECH SECTION
+         ========================================== -->
+    <section class="py-24 bg-brand-dark text-white border-y border-zinc-900 px-4 sm:px-8 text-center flex flex-col items-center">
+      <div class="max-w-4xl mx-auto">
+        <!-- Message Quote SVG Icon -->
+        <svg class="w-12 h-12 text-brand-orange opacity-40 mb-8 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.851h5v10h-11zm-10 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.851h5v10h-11z" />
+        </svg>
+
+        <blockquote class="font-display font-extrabold text-2xl sm:text-3xl md:text-4xl tracking-tight leading-tight max-w-3xl mx-auto italic">
+          "If we all do something, then together there is no problem that we cannot solve!"
+        </blockquote>
+
+        <cite class="block font-sans font-bold text-sm tracking-widest text-brand-orange uppercase not-italic mt-6">
+          PRASHANT SHUKLA
+        </cite>
+        <span class="block text-xs text-slate-400 font-light -mt-0.5">Founder & President, NayePankh Foundation</span>
+
+        <!-- Cert Badge Footnotes -->
+        <div class="flex flex-col sm:flex-row gap-6 items-center justify-center mt-12 py-6 border-t border-white/5 max-w-2xl mx-auto">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span class="text-xs text-slate-300 font-mono">100% Secure Donations</span>
+          </div>
+          <div class="w-1.5 h-1.5 rounded-full bg-slate-600 hidden sm:block"></div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span class="text-xs text-slate-300 font-mono">80G Income Tax Relief Certifications</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         07. FAQ SECTION (DYNAMIC ACCORDIONS)
+         ========================================== -->
+    <section id="faqs" class="py-24 max-w-4xl mx-auto px-4 sm:px-8">
+      <div class="text-center mb-16">
+        <span class="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">CLEARING DOUBTS</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white mt-1">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="accordion-item bg-white dark:bg-zinc-900 border border-slate-200/60 dark:border-zinc-800/80 rounded-2xl overflow-hidden shadow-sm transition-all">
+          <button class="accordion-header w-full p-6 text-left flex justify-between items-center bg-transparent cursor-pointer">
+            <span class="font-display font-semibold text-slate-900 dark:text-white text-sm sm:text-base pr-4">Is NayePankh government registered?</span>
+            <span class="accordion-icon text-slate-400 shrink-0 transform transition-transform duration-300 font-bold">&#9662;</span>
+          </button>
+          <div class="accordion-content px-6 border-t border-slate-100 dark:border-zinc-800/50">
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm">
+              Yes, NayePankh Foundation is a government-registered NGO (Reg No: UP Government). We are dynamic, legally recognized, and completely cleared to collect charitable contributions under the Sub-Section of Section 80G and 12A.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item bg-white dark:bg-zinc-900 border border-slate-200/60 dark:border-zinc-800/80 rounded-2xl overflow-hidden shadow-sm transition-all">
+          <button class="accordion-header w-full p-6 text-left flex justify-between items-center bg-transparent cursor-pointer">
+            <span class="font-display font-semibold text-slate-900 dark:text-white text-sm sm:text-base pr-4">How can I claim my Sec 80G tax benefits certificate?</span>
+            <span class="accordion-icon text-slate-400 shrink-0 transform transition-transform duration-300 font-bold">&#9662;</span>
+          </button>
+          <div class="accordion-content px-6 border-t border-slate-100 dark:border-zinc-800/50">
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm">
+              When donating through our online stepping portal, choose to input your income Tax PAN Card Number. Upon approval, NayePankh Foundation compiles and dispatches your official Form 10BE directly to your email, allowing you to deduct 50% of the donated sum from your taxable earnings limits.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item bg-white dark:bg-zinc-900 border border-slate-200/60 dark:border-zinc-800/80 rounded-2xl overflow-hidden shadow-sm transition-all">
+          <button class="accordion-header w-full p-6 text-left flex justify-between items-center bg-transparent cursor-pointer">
+            <span class="font-display font-semibold text-slate-900 dark:text-white text-sm sm:text-base pr-4">Where do my donated funds actually go?</span>
+            <span class="accordion-icon text-slate-400 shrink-0 transform transition-transform duration-300 font-bold">&#9662;</span>
+          </button>
+          <div class="accordion-content px-6 border-t border-slate-100 dark:border-zinc-800/50">
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm">
+              We operate under absolute transparency benchmarks! Annual reports detailing resource disbursements are distributed. Over 92% of all capital inflows are dedicated exclusively to direct beneficiary services (books, packets, nutrition, relief goods) and local field logistics rather than administrative overhead.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================
+         08. CONTACT & FOOTER SECTION
+         ========================================== -->
+    <section id="contact" class="py-24 bg-slate-100 dark:bg-zinc-900 border-t border-slate-200/50 dark:border-zinc-800 px-4 sm:px-8">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Contact Address Specs -->
+        <div class="lg:col-span-5 flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-brand-orange">GET IN TOUCH</span>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 dark:text-white mt-1 mb-6">Leave an Enquiry</h2>
+            <p class="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed">
+              We respond to prospective volunteers, corporate matching proposals, and general field questions within 24 business hours. Let's communicate!
+            </p>
+
+            <div class="space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center text-brand-orange shrink-0">✉</span>
+                <div>
+                  <div class="text-xs text-slate-400">Email Address</div>
+                  <a href="mailto:contact@nayepankh.com" class="text-sm font-semibold text-slate-800 dark:text-white">contact@nayepankh.com</a>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-500/10 flex items-center justify-center text-brand-orange shrink-0">☎</span>
+                <div>
+                  <div class="text-xs text-slate-400">Representative Mobile No.</div>
+                  <a href="tel:+918318500748" class="text-sm font-semibold text-slate-800 dark:text-white">+91-8318500748</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social links -->
+          <div class="mt-8 pt-8 border-t border-slate-200 dark:border-zinc-800">
+            <div class="text-xs uppercase tracking-widest text-slate-400 font-bold mb-3">Follow our Chapters</div>
+            <div class="flex gap-3">
+              <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300 hover:text-brand-orange transition-colors">In</a>
+              <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300 hover:text-brand-orange transition-colors">Fb</a>
+              <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300 hover:text-brand-orange transition-colors">Ig</a>
+              <a href="#" class="w-10 h-10 rounded-full bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 flex items-center justify-center font-bold text-slate-600 dark:text-slate-300 hover:text-brand-orange transition-colors">X</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="lg:col-span-7 bg-white dark:bg-zinc-950 p-8 rounded-3xl border border-slate-200/50 dark:border-zinc-800 shadow-xl shadow-blue-900/5">
+          <form id="contact-us-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-400 mb-1" for="contact-name">FULL NAME</label>
+                <input id="contact-name" type="text" placeholder="John Doe" class="w-full px-4 py-3 text-sm bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none focus:border-brand-orange">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-400 mb-1" for="contact-email">EMAIL ADDRESS</label>
+                <input id="contact-email" type="email" placeholder="john@example.com" class="w-full px-4 py-3 text-sm bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none focus:border-brand-orange">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-400 mb-1" for="contact-subject">SUBJECT</label>
+              <input id="contact-subject" type="text" placeholder="Corporate Donation Matching / Voluntering Query" class="w-full px-4 py-3 text-sm bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none focus:border-brand-orange">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-400 mb-1" for="contact-message">YOUR DETAILED MESSAGE</label>
+              <textarea id="contact-message" rows="4" placeholder="Hello NayePankh foundation, I would like to propose..." class="w-full px-4 py-3 text-sm bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none focus:border-brand-orange"></textarea>
+            </div>
+            <button type="submit" class="w-full py-4 rounded-xl bg-brand-blue text-white dark:bg-white dark:text-zinc-900 font-bold text-xs tracking-wider uppercase shadow-md cursor-pointer">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Legal Footnotes & copyright links -->
+      <footer class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-200 dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+        <div>
+          &copy; 2026 NayePankh Foundation. All Rights Reserved. UP Government Registered NGO.
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a href="#" class="hover:text-brand-orange">Terms & Conditions</a>
+          <a href="#" class="hover:text-brand-orange">Privacy Policy</a>
+          <a href="#" class="hover:text-brand-orange">Refund Policy</a>
+          <a href="#" class="hover:text-brand-orange">Shipping & Exchange</a>
+        </div>
+      </footer>
+    </section>
+
+
+    <!-- ==========================================
+         09. MULTI-STEP DONATION PORTAL MODAL
+         ========================================== -->
+    <div id="donation-modal-overlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+      
+      <!-- Modal Box -->
+      <div id="donation-modal" class="relative bg-white dark:bg-zinc-900 rounded-3xl max-w-lg w-full overflow-hidden border border-slate-200/50 dark:border-zinc-800/80 shadow-2xl transform translate-y-12 scale-95 transition-all duration-300">
+        
+        <!-- Header -->
+        <div class="p-6 bg-slate-50 dark:bg-zinc-900/50 border-b border-slate-100 dark:border-zinc-800 flex justify-between items-center">
+          <div>
+            <h3 class="font-display font-bold text-slate-900 dark:text-white">Secure Donation Portal</h3>
+            <p class="text-[11px] text-slate-400 uppercase tracking-widest font-mono">Sec 80G Tax Remission Eligible</p>
+          </div>
+          <button id="close-donate-modal" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-zinc-800 text-slate-500 cursor-pointer">
+            &#x2715;
+          </button>
+        </div>
+
+        <!-- Step indicators row -->
+        <div class="flex items-center justify-between px-6 py-3.5 bg-slate-100 dark:bg-zinc-950/40 border-b border-slate-100 dark:border-zinc-800 text-[10px] font-mono">
+          <span class="donate-step-indicator font-semibold text-brand-orange border-b-2 pb-0.5 border-brand-orange" data-step="1">1. Cause & Amt</span>
+          <span class="text-slate-300 dark:text-zinc-800">&rarr;</span>
+          <span class="donate-step-indicator text-slate-400 pb-0.5" data-step="2">2. Donor Info</span>
+          <span class="text-slate-300 dark:text-zinc-800">&rarr;</span>
+          <span class="donate-step-indicator text-slate-400 pb-0.5" data-step="3">3. Verification</span>
+          <span class="text-slate-300 dark:text-zinc-800">&rarr;</span>
+          <span class="donate-step-indicator text-slate-400 pb-0.5" data-step="4">4. Certificate Received</span>
+        </div>
+
+        <!-- Main Form steps container -->
+        <div class="p-6">
+          
+          <!-- ==================== STEP 1 ==================== -->
+          <div class="donation-step" data-step="1">
+            <h4 class="font-semibold text-sm text-slate-700 dark:text-slate-200 mb-3">1. Select a Support Cause</h4>
+            <div class="grid grid-cols-2 gap-3 mb-6">
+              <button class="cause-radio-card p-3 rounded-xl border text-left flex flex-col justify-between border-brand-orange bg-orange-50/10 cursor-pointer text-xs" data-cause="Child Education Support">
+                <span class="font-semibold block mb-1">🎓 Child Education</span>
+                <span class="text-[10px] text-slate-400">Books & School fees</span>
+              </button>
+              <button class="cause-radio-card p-3 rounded-xl border text-left flex flex-col justify-between border-slate-200 dark:border-zinc-800 cursor-pointer text-xs" data-cause="Menstrual Hygiene Kit Support">
+                <span class="font-semibold block mb-1">🌸 Hygiene Kits</span>
+                <span class="text-[10px] text-slate-400">Pads and counseling</span>
+              </button>
+            </div>
+
+            <h4 class="font-semibold text-sm text-slate-700 dark:text-slate-200 mb-3">2. Donation Amount (INR)</h4>
+            <!-- Preset Cards Grid -->
+            <div class="grid grid-cols-4 gap-2 mb-4">
+              <button class="preset-amount-btn py-3 px-1 rounded-xl border text-xs font-semibold text-slate-800 dark:text-slate-200 bg-white dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 cursor-pointer hover:border-brand-orange" data-amount="500">₹500</button>
+              <button class="preset-amount-btn py-3 px-1 rounded-xl border text-xs font-semibold text-white bg-orange-600 border-orange-600 scale-105 cursor-pointer" data-amount="1000">₹1,000</button>
+              <button class="preset-amount-btn py-3 px-1 rounded-xl border text-xs font-semibold text-slate-800 dark:text-slate-200 bg-white dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 cursor-pointer hover:border-brand-orange" data-amount="2000">₹2,000</button>
+              <button class="preset-amount-btn py-3 px-1 rounded-xl border text-xs font-semibold text-slate-800 dark:text-slate-200 bg-white dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 cursor-pointer hover:border-brand-orange" data-amount="5000">₹5,000</button>
+            </div>
+
+            <!-- Custom Field Input -->
+            <div class="relative mb-6">
+              <span class="absolute left-4 top-3.5 text-xs text-slate-400 font-bold">OR ENTER CUSTOM VALUE : ₹</span>
+              <input id="custom-amount-input" type="number" placeholder="Enter custom amount (e.g. 1500)" class="w-full pl-44 pr-4 py-3 text-xs bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none focus:border-brand-orange">
+            </div>
+
+            <!-- Exemption dynamic calculation label -->
+            <div id="donation-impact-banner" class="p-4 rounded-xl bg-orange-50/20 dark:bg-orange-500/5 border border-brand-orange/20 text-xs mb-6">
+              <!-- Inline values injected during load/change with Vanilla JS -->
+            </div>
+
+            <button id="donate-btn-step1" class="w-full py-3.5 rounded-xl bg-brand-orange text-white text-xs font-bold uppercase tracking-wider cursor-pointer">
+              Proceed to Donor Details &rarr;
+            </button>
+          </div>
+
+          <!-- ==================== STEP 2 ==================== -->
+          <div class="donation-step hidden" data-step="2">
+            <h4 class="font-semibold text-sm text-slate-700 dark:text-slate-200 mb-4">Please input Donor details (Legally Required for 80G Certificate)</h4>
+            
+            <div class="space-y-3.5 mb-6">
+              <div>
+                <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1" for="donor-name"> donor full name *</label>
+                <input id="donor-name" type="text" placeholder="John Doe" class="w-full px-4 py-3 text-xs bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none">
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1" for="donor-email">donor email *</label>
+                  <input id="donor-email" type="email" placeholder="john@example.com" class="w-full px-4 py-3 text-xs bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none">
+                </div>
+                <div>
+                  <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1" for="donor-phone">donor phone *</label>
+                  <input id="donor-phone" type="text" placeholder="10-digit number" class="w-full px-4 py-3 text-xs bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none">
+                </div>
+              </div>
+              <div>
+                <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1" for="donor-pan"> Income Tax PAN Card details (Optional - for Form 10BE Filing)</label>
+                <input id="donor-pan" type="text" placeholder="ABCDE1234F" class="w-full px-4 py-3 text-xs uppercase bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none">
+              </div>
+
+              <!-- Interactive tax calculator inline widget -->
+              <div class="p-3.5 rounded-xl border border-dashed border-slate-200 dark:border-zinc-800">
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <span class="text-xs text-slate-500 font-medium">Claim Tax Slab Bracket:</span>
+                  <select id="tax-bracket" class="text-xs bg-slate-100 dark:bg-zinc-800 border-none p-1.5 rounded focus:outline-none font-semibold">
+                    <option value="0.30">30% (Highest Slab)</option>
+                    <option value="0.20">20% (Medium Slab)</option>
+                    <option value="0.10" selected>10% (Base Slab)</option>
+                  </select>
+                </div>
+                <div class="flex justify-between items-center bg-slate-50 dark:bg-zinc-900 p-2.5 rounded-lg text-xs">
+                  <span class="text-slate-400 font-mono">Actual Cash Tax Saved Value:</span>
+                  <span id="calculated-exemption-amount" class="font-bold text-green-600 dark:text-green-500 text-sm">₹0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-3">
+              <button id="donate-btn-step2-back" class="flex-1 py-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 text-xs text-slate-500 dark:text-slate-300 font-bold uppercase cursor-pointer">
+                Back
+              </button>
+              <button id="donate-btn-step2" class="flex-1 py-3.5 rounded-xl bg-brand-orange text-white text-xs font-bold uppercase tracking-wider cursor-pointer">
+                Verify Contribution &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- ==================== STEP 3 ==================== -->
+          <div class="donation-step hidden" data-step="3">
+            <h4 class="font-semibold text-sm text-slate-700 dark:text-slate-100 mb-4">Verification Summary & Secure Payment Scan</h4>
+            
+            <div class="space-y-2.5 mb-6 bg-slate-50 dark:bg-zinc-950/30 p-4 border border-slate-150 dark:border-zinc-800 rounded-2xl text-xs">
+              <div class="flex justify-between">
+                <span class="text-slate-400 font-medium">Contributed Amount:</span>
+                <span id="summary-amount" class="font-semibold text-slate-800 dark:text-white">₹1,000</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400 font-medium">Designated Campaign:</span>
+                <span id="summary-cause" class="font-semibold text-slate-800 dark:text-white">Child Education</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400 font-medium">Net Exemption Savings:</span>
+                <span id="summary-tax-saved" class="font-semibold text-green-600 dark:text-green-500">₹150</span>
+              </div>
+            </div>
+
+            <!-- Dynamic Mock QR Gateway representation -->
+            <div class="flex flex-col items-center bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 rounded-2xl p-4 mb-6">
+              <span class="text-[10px] font-bold text-slate-400 mb-2 font-mono select-none">UPI PAYMENT QR SCAN GATEWAY</span>
+              <div class="w-32 h-32 bg-slate-100 border border-slate-300 dark:border-zinc-700 flex items-center justify-center p-3 relative rounded-lg">
+                <!-- QR Vector Represent via clean HTML -->
+                <div class="w-full h-full relative grid grid-cols-4 grid-rows-4 gap-1 opacity-80">
+                  <div class="bg-slate-900 dark:bg-white rounded-sm"></div>
+                  <div class="bg-slate-900 dark:bg-white rounded-sm"></div>
+                  <div></div>
+                  <div class="bg-slate-900 dark:bg-white rounded-sm"></div>
+                  <div class="bg-slate-900 dark:bg-white rounded-sm"></div>
+                  <div></div>
+                  <div></div>
+                  <div class="bg-slate-900 dark:bg-white rounded-sm"></div>
+                  <div></div>
+                  <div class="bg-slate-900 dark:bg-white rounded-sm"></div>
+                  <div class="bg-slate-900 dark:bg-white rounded-sm"></div>
+                  <div></div>
+                  <div class="bg-slate-900 dark:bg-white rounded-sm"></div>
+                  <div></div>
+                  <div class="bg-slate-900 dark:bg-white rounded-sm"></div>
+                  <div class="bg-slate-900 dark:bg-white rounded-sm"></div>
+                </div>
+                <!-- Small Center Lock Logo overlay -->
+                <div class="absolute inset-0 m-auto w-8 h-8 rounded bg-white dark:bg-zinc-900 border border-slate-300 dark:border-zinc-700 flex items-center justify-center text-xs">🛡️</div>
+              </div>
+              <p class="text-[10px] text-slate-400 text-center mt-3">Scan this dynamic safe UPI wrapper using GPay, PayTM, PhonePe, or BHIM.</p>
+            </div>
+
+            <div class="flex gap-3">
+              <button id="donate-btn-step3-back" class="flex-1 py-3.5 rounded-xl border border-slate-200 dark:border-zinc-800 text-xs text-slate-500 dark:text-slate-300 font-bold uppercase cursor-pointer">
+                Back
+              </button>
+              <button id="donate-btn-submit-payment" class="flex-1 py-3.5 rounded-xl bg-green-600 text-white text-xs font-bold uppercase tracking-wider cursor-pointer">
+                Approve & Pay Securely
+              </button>
+            </div>
+          </div>
+
+          <!-- ==================== STEP 4 ==================== -->
+          <div class="donation-step hidden" data-step="4">
+            <div class="text-center mb-6">
+              <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 mx-auto mb-3 animate-bounce">✓</div>
+              <h4 class="font-display font-extrabold text-lg text-slate-900 dark:text-white">Exemption Document Generated</h4>
+              <p class="text-xs text-slate-400">Claims submitted safely under Section 80G.</p>
+            </div>
+
+            <!-- Stylized printable "Receipt Certificate Card" -->
+            <div id="receipt-certificate-content" class="p-6 border border-slate-200 dark:border-zinc-800/80 bg-[#fdfdfd] dark:bg-zinc-950 rounded-2xl shadow-inner relative overflow-hidden font-sans mb-6">
+              <!-- Watermark SVG wings -->
+              <div class="absolute top-2 right-2 flex flex-col items-end opacity-20 text-brand-orange">
+                <span class="text-[10px] uppercase font-bold tracking-widest font-mono">Receipt Certificate No:</span>
+                <span id="receipt-doc-no" class="text-xs font-mono font-bold text-slate-800 dark:text-white">NPF-TEMP-0010</span>
+              </div>
+
+              <!-- Content details inside certificate receipt -->
+              <div class="border-b border-dashed border-slate-200 dark:border-zinc-800 pb-3 mb-3">
+                <h5 class="text-brand-blue dark:text-white text-xs font-bold font-display tracking-tight">NAYEPANKH FOUNDATION</h5>
+                <span class="text-[8px] text-slate-400 block -mt-1 font-mono uppercase">80G (ii) Approved Exempt Charity</span>
+              </div>
+
+              <div class="space-y-2 text-[11px] text-slate-700 dark:text-slate-200 leading-normal">
+                <p>This is to certify with high gratitude the benevolent donation of: <br/><b id="receipt-donor-name" class="text-slate-900 dark:text-white text-xs font-bold">John Doe</b></p>
+                <p>The sum of: <br/><b id="receipt-amount-words" class="italic text-slate-800 dark:text-slate-300">ONE THOUSAND RUPEES ONLY</b></p>
+                <div class="flex justify-between bg-white dark:bg-zinc-900/50 p-2 border border-slate-100 dark:border-zinc-800/30 rounded-lg text-xs font-mono">
+                  <span>Donated sum: <b id="receipt-amount-digits">₹1,000</b></span>
+                  <span>Date: <b id="receipt-date">June 2026</b></span>
+                </div>
+                <p id="receipt-tax-benefit" class="text-[9px] text-green-600 font-semibold font-mono">Exemptable Value: 50% Exempt (Under Section 80G)</p>
+              </div>
+
+              <div class="mt-4 pt-3 border-t border-dashed border-slate-200 dark:border-zinc-800 flex justify-between items-center text-[8px] text-slate-400">
+                <span>Authorized signatory:<br/><b class="text-slate-500">Prashant Shukla (President)</b></span>
+                <span>NayePankh Operations, Kanpur</span>
+              </div>
+            </div>
+
+            <!-- Options buttons -->
+            <div class="flex flex-col sm:flex-row gap-3">
+              <button id="print-certificate-btn" class="flex-1 py-3 px-4 rounded-xl border border-slate-200 dark:border-zinc-800 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-zinc-800 transition-colors">
+                Print Exemption PDF
+              </button>
+              <button id="donate-btn-step4-done" class="flex-1 py-3 px-4 rounded-xl bg-orange-600 text-white text-xs font-bold uppercase tracking-widest hover:bg-orange-700 transition-colors">
+                Finish & Go back
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ==========================================
+         10. VOLUNTEER REGISTRATION OVERLAY MODAL
+         ========================================== -->
+    <div id="join-modal-overlay" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-300">
+      
+      <div id="join-modal" class="relative bg-white dark:bg-zinc-900 rounded-3xl max-w-md w-full overflow-hidden border border-slate-200/50 dark:border-zinc-800/80 shadow-2xl transform translate-y-12 scale-95 transition-all duration-300">
+        
+        <div class="p-6 bg-slate-50 dark:bg-zinc-900/50 border-b border-slate-100 dark:border-zinc-800 flex justify-between items-center">
+          <div>
+            <h3 class="font-display font-bold text-slate-900 dark:text-white">Volunteer Sign Up</h3>
+            <p class="text-[10px] text-slate-400 font-mono uppercase tracking-widest">Apply to NayePankh student chapters</p>
+          </div>
+          <button id="close-join-modal" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-zinc-800 text-slate-500">
+            &#x2715;
+          </button>
+        </div>
+
+        <div class="p-6">
+          <form id="join-team-form" class="space-y-4">
+            <div>
+              <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1" for="vol-name">Full name *</label>
+              <input id="vol-name" type="text" placeholder="John Doe" class="w-full px-4 py-3 text-xs bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none" required>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1" for="vol-email">Email Address *</label>
+                <input id="vol-email" type="email" placeholder="john@example.com" class="w-full px-4 py-3 text-xs bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none" required>
+              </div>
+              <div>
+                <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1" for="vol-phone">Contact phone (WhatsApp) *</label>
+                <input id="vol-phone" type="text" placeholder="Your whatsapp no" class="w-full px-4 py-3 text-xs bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none" required>
+              </div>
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1" for="vol-city">Your current city *</label>
+              <input id="vol-city" type="text" placeholder="e.g. Kanpur, Ghaziabad, Delhi" class="w-full px-4 py-3 text-xs bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none" required>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1" for="vol-specialty">Preferred Domain</label>
+                <select id="vol-specialty" class="w-full px-3 py-3 text-xs bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none">
+                  <option value="On-field Event Support">On-field Event Support</option>
+                  <option value="Teaching & Child Education">Teaching & Education</option>
+                  <option value="Social Media Content & Writing">Social Media Content</option>
+                  <option value="Fundraising Logistics">Fundraising Logistics</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[10px] uppercase font-semibold text-slate-400 mb-1" for="vol-hours">Weekly hours commitments</label>
+                <select id="vol-hours" class="w-full px-3 py-3 text-xs bg-slate-50 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-xl focus:outline-none">
+                  <option value="2-4 Hours Weekly">2-4 Hours Weekly</option>
+                  <option value="5-8 Hours Weekly">5-8 Hours Weekly</option>
+                  <option value="8+ Hours (Heavy dedication)">8+ Hours</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-brand-blue hover:bg-opacity-90 text-white font-bold text-xs uppercase tracking-wider cursor-pointer">
+              Submit Application
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Script loading point -->
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
